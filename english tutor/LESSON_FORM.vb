@@ -17,7 +17,7 @@ Public Class LESSON_FORM
         string_line = reader.ReadLine
         While Not string_line Is Nothing
             If string_line Like "* - *" Or string_line Like "* —  *" Then
-                string_line = Replace(string_line, "— ", "-")
+                string_line = Replace(string_line, "—", "-")
                 list_lines.Add(string_line)
             End If
             string_line = reader.ReadLine
@@ -25,7 +25,7 @@ Public Class LESSON_FORM
         reader.Close()
 
         list_lines = Randomize(list_lines)
-
+        Me.Label_tests_count.Text = "Всього : " & list_lines.Count()
         listLinesIndex = 0
         StartNewLine()
     End Sub
@@ -37,8 +37,10 @@ Public Class LESSON_FORM
             splitedLine = Split(list_lines(listLinesIndex), " - ")
             listLinesIndex += 1
             If splitedLine.Count > 1 Then
-                labelEng_ans = splitedLine(0)
-                Label_ua.Text = splitedLine(1)
+                labelEng_ans = Trim(splitedLine(0))
+                Label_ua.Text = Trim(splitedLine(1))
+                Debug.Print(Trim(splitedLine(0)))
+                Me.Label_test_count.Text = "тест № " & listLinesIndex
             End If
         Else
             Me.Close()
