@@ -88,6 +88,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="LESSON_FORM.Designer.vb">
       <DependentUpon>LESSON_FORM.vb</DependentUpon>
     </Compile>

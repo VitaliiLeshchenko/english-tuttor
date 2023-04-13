@@ -4,9 +4,8 @@ Imports System.IO
 Public Class MainForm
 
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.CenterToScreen()
         getFileNames()
-
     End Sub
 
     Private Sub getFileNames()
@@ -30,7 +29,7 @@ Public Class MainForm
         If ListBox_lessons.SelectedItem = "" Then
             MsgBox("Вы не выбрали урок.")
         Else
-            work(ListBox_lessons.SelectedItem)
+            LESSON_FORM.Show()
         End If
     End Sub
 End Class
