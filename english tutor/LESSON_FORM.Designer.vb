@@ -52,10 +52,10 @@ Partial Class LESSON_FORM
         'Label_ua
         '
         Me.Label_ua.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label_ua.Location = New System.Drawing.Point(7, 367)
+        Me.Label_ua.Location = New System.Drawing.Point(9, 472)
         Me.Label_ua.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label_ua.Name = "Label_ua"
-        Me.Label_ua.Size = New System.Drawing.Size(777, 146)
+        Me.Label_ua.Size = New System.Drawing.Size(777, 41)
         Me.Label_ua.TabIndex = 2
         Me.Label_ua.Text = "Label_ua"
         '

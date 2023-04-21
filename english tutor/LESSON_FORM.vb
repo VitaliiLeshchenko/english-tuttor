@@ -18,6 +18,7 @@ Public Class LESSON_FORM
         While Not string_line Is Nothing
             AddNewLineToList(string_line)
             string_line = reader.ReadLine
+            Debug.Print(string_line)
         End While
         reader.Close()
 
