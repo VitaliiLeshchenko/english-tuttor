@@ -47,7 +47,7 @@ Public Class MainForm
         If ListBox_lessons.SelectedItem = "" Then
             MsgBox("Вы не выбрали урок.")
         Else
-            LESSON_FORM.Show()
+            LESSON_FORM_txt.Show()
         End If
     End Sub
 End Class

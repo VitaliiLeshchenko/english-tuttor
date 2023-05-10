@@ -89,10 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="LESSON_FORM.Designer.vb">
-      <DependentUpon>LESSON_FORM.vb</DependentUpon>
+    <Compile Include="LESSON_FORM_txt.Designer.vb">
+      <DependentUpon>LESSON_FORM_txt.vb</DependentUpon>
     </Compile>
-    <Compile Include="LESSON_FORM.vb">
+    <Compile Include="LESSON_FORM_txt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.vb">
@@ -121,8 +121,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LESSON_FORM.resx">
-      <DependentUpon>LESSON_FORM.vb</DependentUpon>
+    <EmbeddedResource Include="LESSON_FORM_txt.resx">
+      <DependentUpon>LESSON_FORM_txt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>

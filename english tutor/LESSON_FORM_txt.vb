@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Class LESSON_FORM
+Public Class LESSON_FORM_txt
     Dim lessonName As String
     Dim list_lines As New List(Of String)
     Dim listLinesIndex As Integer
