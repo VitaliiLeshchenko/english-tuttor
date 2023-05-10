@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class LESSON_FORM
+Partial Class LESSON_FORM_txt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -52,10 +52,10 @@ Partial Class LESSON_FORM
         'Label_ua
         '
         Me.Label_ua.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label_ua.Location = New System.Drawing.Point(7, 367)
+        Me.Label_ua.Location = New System.Drawing.Point(9, 472)
         Me.Label_ua.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label_ua.Name = "Label_ua"
-        Me.Label_ua.Size = New System.Drawing.Size(777, 146)
+        Me.Label_ua.Size = New System.Drawing.Size(777, 41)
         Me.Label_ua.TabIndex = 2
         Me.Label_ua.Text = "Label_ua"
         '
@@ -83,7 +83,7 @@ Partial Class LESSON_FORM
         Me.Label_test_count.Size = New System.Drawing.Size(126, 56)
         Me.Label_test_count.TabIndex = 5
         '
-        'LESSON_FORM
+        'LESSON_FORM_txt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -95,7 +95,7 @@ Partial Class LESSON_FORM
         Me.Controls.Add(Me.Label_eng)
         Me.Controls.Add(Me.TextBox_ans)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "LESSON_FORM"
+        Me.Name = "LESSON_FORM_txt"
         Me.Text = "LESSON_FORM"
         Me.ResumeLayout(False)
         Me.PerformLayout()

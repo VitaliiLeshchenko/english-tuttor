@@ -1,12 +1,18 @@
 ﻿Imports System.IO
 
-Public Class LESSON_FORM
+Public Class LESSON_FORM_csv
     Dim lessonName As String
     Dim list_lines As New List(Of String)
     Dim listLinesIndex As Integer
-    Dim engAns As String
 
-    Private Sub LESSON_FORM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim article As String
+    Dim engAns As String
+    Dim wordType As String
+    Dim uaTranslation As String
+    Dim engMeaning As String
+
+
+    Private Sub LESSON_FORM_csc_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lessonName = MainForm.ListBox_lessons.SelectedItem
         MainForm.Hide()
 
@@ -18,6 +24,7 @@ Public Class LESSON_FORM
         While Not string_line Is Nothing
             AddNewLineToList(string_line)
             string_line = reader.ReadLine
+            Debug.Print(string_line)
         End While
         reader.Close()
 
@@ -29,13 +36,19 @@ Public Class LESSON_FORM
 
     Private Sub StartNewLine()
         If listLinesIndex < list_lines.Count() Then
-            Dim splitedLine(2) As String
+            Dim splitedLine(5) As String
 
-            splitedLine = Split(list_lines(listLinesIndex), " - ")
+            splitedLine = Split(list_lines(listLinesIndex), ";")
             listLinesIndex += 1
             If splitedLine.Count > 1 Then
-                engAns = Trim(splitedLine(0))
-                Label_ua.Text = Trim(splitedLine(1))
+                article = Trim(splitedLine(0))
+                engAns = Trim(splitedLine(1))
+                wordType = Trim(splitedLine(2))
+                uaTranslation = Trim(splitedLine(3))
+                engMeaning = Trim(splitedLine(4))
+
+                Me.Label_ua.Text = uaTranslation
+                Me.Label_engMeaning.Text = "(" & wordType & ") " & engMeaning
                 Me.Label_test_count.Text = "тест № " & listLinesIndex
             End If
         Else
@@ -51,7 +64,7 @@ Public Class LESSON_FORM
                 StartNewLine()
             Else
                 Label_eng.Text = engAns
-                AddNewLineToList(engAns & " - " & Label_ua.Text)
+                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning)
             End If
             e.Handled = True
         End If
@@ -63,10 +76,13 @@ Public Class LESSON_FORM
     End Sub
 
     Private Sub AddNewLineToList(string_line As String)
-        If string_line Like "* - *" Or string_line Like "* —  *" Then
-            string_line = Replace(string_line, "—", "-")
+        If Microsoft.VisualBasic.Right(string_line, 1) = "-" Then
             list_lines.Add(string_line)
         End If
         Me.Label_tests_count.Text = "Всього : " & list_lines.Count()
     End Sub
+
+
+
+
 End Class
