@@ -89,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="LESSON_FORM_csv.Designer.vb">
+      <DependentUpon>LESSON_FORM_csv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LESSON_FORM_csv.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LESSON_FORM_txt.Designer.vb">
       <DependentUpon>LESSON_FORM_txt.vb</DependentUpon>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LESSON_FORM_csv.resx">
+      <DependentUpon>LESSON_FORM_csv.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LESSON_FORM_txt.resx">
       <DependentUpon>LESSON_FORM_txt.vb</DependentUpon>
     </EmbeddedResource>

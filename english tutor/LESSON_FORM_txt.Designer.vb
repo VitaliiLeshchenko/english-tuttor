@@ -83,7 +83,7 @@ Partial Class LESSON_FORM_txt
         Me.Label_test_count.Size = New System.Drawing.Size(126, 56)
         Me.Label_test_count.TabIndex = 5
         '
-        'LESSON_FORM
+        'LESSON_FORM_txt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -95,7 +95,7 @@ Partial Class LESSON_FORM_txt
         Me.Controls.Add(Me.Label_eng)
         Me.Controls.Add(Me.TextBox_ans)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "LESSON_FORM"
+        Me.Name = "LESSON_FORM_txt"
         Me.Text = "LESSON_FORM"
         Me.ResumeLayout(False)
         Me.PerformLayout()
