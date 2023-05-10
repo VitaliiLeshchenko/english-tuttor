@@ -47,7 +47,12 @@ Public Class MainForm
         If ListBox_lessons.SelectedItem = "" Then
             MsgBox("Вы не выбрали урок.")
         Else
-            LESSON_FORM_txt.Show()
+            If Microsoft.VisualBasic.Right(ListBox_lessons.SelectedItem, 3) = "txt" Then
+                LESSON_FORM_txt.Show()
+            End If
+            If Microsoft.VisualBasic.Right(ListBox_lessons.SelectedItem, 3) = "csv" Then
+                LESSON_FORM_csv.Show()
+            End If
         End If
     End Sub
 End Class

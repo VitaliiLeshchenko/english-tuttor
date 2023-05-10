@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LESSON_FORM_csv
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class LESSON_FORM_csv
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label_test_count = New System.Windows.Forms.Label()
         Me.Label_tests_count = New System.Windows.Forms.Label()
@@ -29,7 +29,6 @@ Partial Class LESSON_FORM_csv
         Me.Label_eng = New System.Windows.Forms.Label()
         Me.TextBox_ans = New System.Windows.Forms.TextBox()
         Me.Label_engMeaning = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label_test_count
@@ -60,16 +59,15 @@ Partial Class LESSON_FORM_csv
         '
         Me.Label_ua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label_ua.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label_ua.Location = New System.Drawing.Point(213, 92)
+        Me.Label_ua.Location = New System.Drawing.Point(16, 92)
         Me.Label_ua.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label_ua.Name = "Label_ua"
-        Me.Label_ua.Size = New System.Drawing.Size(578, 100)
+        Me.Label_ua.Size = New System.Drawing.Size(775, 100)
         Me.Label_ua.TabIndex = 8
         Me.Label_ua.Text = "Label_ua"
         '
         'Label_eng
         '
-        Me.Label_eng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label_eng.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label_eng.Location = New System.Drawing.Point(12, 201)
         Me.Label_eng.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -98,23 +96,11 @@ Partial Class LESSON_FORM_csv
         Me.Label_engMeaning.TabIndex = 12
         Me.Label_engMeaning.Text = "Label_engMeaning"
         '
-        'Label2
-        '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 92)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(192, 100)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "Label2"
-        '
         'LESSON_FORM_csv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(811, 540)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label_engMeaning)
         Me.Controls.Add(Me.Label_test_count)
         Me.Controls.Add(Me.Label_tests_count)
@@ -136,5 +122,4 @@ Partial Class LESSON_FORM_csv
     Friend WithEvents Label_eng As Label
     Friend WithEvents TextBox_ans As TextBox
     Friend WithEvents Label_engMeaning As Label
-    Friend WithEvents Label2 As Label
 End Class
