@@ -36,7 +36,7 @@ Public Class LESSON_FORM_csv
 
     Private Sub StartNewLine()
         If listLinesIndex < list_lines.Count() Then
-            Dim splitedLine(5) As String
+            Dim splitedLine(6) As String
 
             splitedLine = Split(list_lines(listLinesIndex), ";")
             listLinesIndex += 1
@@ -64,7 +64,7 @@ Public Class LESSON_FORM_csv
                 StartNewLine()
             Else
                 Label_eng.Text = engAns
-                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning)
+                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning & ";-")
             End If
             e.Handled = True
         End If
