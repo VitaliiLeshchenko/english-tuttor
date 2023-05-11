@@ -67,7 +67,7 @@ Public Class LESSON_FORM_csv
                 StartNewLine()
             Else
                 Label_eng.Text = engAns
-                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning & ";-")
+                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning & ";" & learned_words_train)
             End If
             e.Handled = True
         End If
