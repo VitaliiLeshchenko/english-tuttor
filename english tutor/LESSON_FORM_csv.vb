@@ -11,9 +11,12 @@ Public Class LESSON_FORM_csv
     Dim uaTranslation As String
     Dim engMeaning As String
 
+    Dim learned_words_train As String = "-"
+
 
     Private Sub LESSON_FORM_csc_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lessonName = MainForm.ListBox_lessons.SelectedItem
+        If MainForm.CheckBox_learned_words_train.Checked Then learned_words_train = "+"
         MainForm.Hide()
 
         Me.CenterToScreen()
@@ -36,7 +39,7 @@ Public Class LESSON_FORM_csv
 
     Private Sub StartNewLine()
         If listLinesIndex < list_lines.Count() Then
-            Dim splitedLine(5) As String
+            Dim splitedLine(6) As String
 
             splitedLine = Split(list_lines(listLinesIndex), ";")
             listLinesIndex += 1
@@ -64,7 +67,7 @@ Public Class LESSON_FORM_csv
                 StartNewLine()
             Else
                 Label_eng.Text = engAns
-                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning)
+                AddNewLineToList(article & ";" & engAns & ";" & wordType & ";" & uaTranslation & ";" & engMeaning & ";" & learned_words_train)
             End If
             e.Handled = True
         End If
@@ -76,7 +79,7 @@ Public Class LESSON_FORM_csv
     End Sub
 
     Private Sub AddNewLineToList(string_line As String)
-        If Microsoft.VisualBasic.Right(string_line, 1) = "-" Then
+        If Microsoft.VisualBasic.Right(string_line, 1) = learned_words_train Then
             list_lines.Add(string_line)
         End If
         Me.Label_tests_count.Text = "Всього : " & list_lines.Count()
