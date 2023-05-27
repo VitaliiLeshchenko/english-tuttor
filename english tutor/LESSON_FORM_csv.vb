@@ -11,12 +11,12 @@ Public Class LESSON_FORM_csv
     Dim uaTranslation As String
     Dim engMeaning As String
 
-    Dim learned_words_train As String = "-"
+    Dim learned_words_train As String = "needToLearn"
 
 
     Private Sub LESSON_FORM_csc_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lessonName = MainForm.ListBox_lessons.SelectedItem
-        If MainForm.CheckBox_learned_words_train.Checked Then learned_words_train = "+"
+        If MainForm.CheckBox_learned_words_train.Checked Then learned_words_train = "needToRepeat"
         MainForm.Hide()
 
         Me.CenterToScreen()
@@ -79,7 +79,7 @@ Public Class LESSON_FORM_csv
     End Sub
 
     Private Sub AddNewLineToList(string_line As String)
-        If Microsoft.VisualBasic.Right(string_line, 1) = learned_words_train Then
+        If string_line Like "*" & learned_words_train & "*" Then
             list_lines.Add(string_line)
         End If
         Me.Label_tests_count.Text = "Всього : " & list_lines.Count()
